@@ -28,7 +28,6 @@ function FollowersList(props) {
                 <CardStyle key={person.id} className='followers'>
                     <ImageStyle src={person.avatar_url} alt='follower image' />
                     <h1>{person.login}</h1>
-                    {/* <p>Profile: {person.html_url}</p> */}
                 </CardStyle>
             ))}
         </GridStyle>

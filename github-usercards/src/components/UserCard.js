@@ -4,23 +4,35 @@ import styled from 'styled-components';
 const UserContainer = styled.div`
     display: flex;
     margin-bottom: 2rem;
+    width: 100%;
+
+    @media (max-width: 730px) {
+        flex-direction: column;
+    }
 `
 const TextStyling = styled.div`
-    width: 50%;
+    width: 100%;
     text-align: center;
     background-color: slategrey;
     font-size: 1.6rem;
     border-top-right-radius: 7px;
     border-bottom-right-radius: 7px;
     padding: 2%;
-`
-const blerg = styled.div`
-    text-align: center;
+
+    @media (max-width: 730px) {
+        border-bottom-left-radius: 7px;
+        border-top-right-radius: 0px;
+        width: 96%;
+    }
 `
 const ImageStyle = styled.img`
-    width: 50%;
     border-top-left-radius: 7px;
     border-bottom-left-radius: 7px;
+
+    @media (max-width: 730px) {
+        border-top-right-radius: 7px;
+        border-bottom-left-radius: 0px;
+    }
 `
 
 function UserCard(props) {
