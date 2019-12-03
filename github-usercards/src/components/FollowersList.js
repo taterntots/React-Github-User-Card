@@ -9,22 +9,27 @@ const GridStyle = styled.div`
   grid-auto-flow: row;
   justify-content: center;
   align-items: start;
-  margin: 0 2rem;
-//   background-color: #C8DD5D;
+`
+const CardStyle = styled.div`
+  border-radius: 7px;
+  background-color: slategrey;
+  text-align: center;
 `
 const ImageStyle = styled.img`
   width: 100%;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
 `
 
 function FollowersList(props) {
     return (
         <GridStyle>
             {props.followers.map(person => (
-                <div key={person.id} className='followers'>
+                <CardStyle key={person.id} className='followers'>
                     <ImageStyle src={person.avatar_url} alt='follower image' />
                     <h1>{person.login}</h1>
-                    <p>Profile: {person.html_url}</p>
-                </div>
+                    {/* <p>Profile: {person.html_url}</p> */}
+                </CardStyle>
             ))}
         </GridStyle>
     )

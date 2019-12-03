@@ -30,7 +30,6 @@ class App extends React.Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h1>gitHub Project</h1>
           <UserCard user={this.state.user} />
         </header>
         <section>
