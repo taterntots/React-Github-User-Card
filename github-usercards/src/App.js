@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import UserCard from './components/UserCard';
 import './App.css';
 
 class App extends React.Component {
@@ -14,7 +15,7 @@ class App extends React.Component {
     axios.get('https://api.github.com/users/taterntots')
     .then(response => {
       console.log(response.data);
-      this.setState({ user: response.data.login });
+      this.setState({ user: response.data });
     })
   }
 
@@ -23,6 +24,7 @@ class App extends React.Component {
       <div className="App">
         <header className="App-header">
          <h1>gitHub UserCards</h1>
+         <UserCard user={this.state.user} />
         </header>
       </div>
     );
